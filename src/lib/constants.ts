@@ -17,5 +17,5 @@ export const UNIVERSITY_INFO = {
     holidays: '土日祝日、年末年始（12月30日～1月3日）',
     note1: '※回答には2〜3営業日いただく場合がございます。',
     note2: '※お急ぎの場合はお電話にてお問い合わせください。',
-    univHpUrl: 'http://localhost:3000/mockup_univ_hp.html'  // TODO: Update this URL to the actual university HP URL
+    univHpUrl: process.env.NEXT_PUBLIC_UNIV_HP_URL ?? '/mockup_univ_hp.html'  // See: Environment Variables (.env.local)
 } as const;

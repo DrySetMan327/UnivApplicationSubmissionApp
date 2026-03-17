@@ -106,7 +106,7 @@ erDiagram
         timestamp updated_at "更新日時"
     }
 
-    application_profiles（出願登録済み本人情報スナップショット） {
+    application_profiles（出願登録済み本人情報） {
         uuid id PK "出願登録済み本人情報ID"
         uuid application_id FK "出願ID"
         text user_name "ユーザー名"
@@ -127,7 +127,7 @@ erDiagram
         timestamp registered_at "出願登録日時"
     }
 
-    application_details（出願登録済み志望詳細情報スナップショット） {
+    application_details（出願登録済み志望詳細情報） {
         uuid id PK "出願詳細ID"
         uuid application_id FK "出願ID"
         text exam_type_name "入試種別名"
@@ -254,10 +254,10 @@ erDiagram
     prefectures ||--o{ user_profiles: ""
     prefectures ||--o{ application_profiles: ""
     user_profiles ||--o{ applications: "出願登録申し込み"
-    applications ||--|| application_profiles: "出願時本人情報(スナップショット)"
-    applications ||--|| application_details: "出願時志望詳細(スナップショット)"
-    application_units ||..o{ applications: "出願時に参照した申込単位(参考)"
-    exam_schedules ||..o{ applications: "出願時に参照した試験日程(参考)"
+    applications ||--|| application_profiles: "出願時の本人情報スナップショット"
+    applications ||--|| application_details: "出願時の志望詳細情報スナップショット"
+    application_units ||..o{ applications: "出願時に参照した申込単位マスタ"
+    exam_schedules ||..o{ applications: "出願時に参照した試験日程マスタ"
 
 ```
 
@@ -297,8 +297,7 @@ erDiagram
 │   │   └── ui/             # 汎用UI（Alert, Button, Card等）
 │   ├── lib/                # スキーマ定義、共通型、ユーティリティ
 │   └── utils/              # Supabaseクライアント等の設定
-├── supabase/               # Supabase設定、マイグレーション、メールテンプレート
-├── node_modules/           # Node.jsの依存関係パッケージ（外部ライブラリ）
+├── supabase/               # ローカル環境上のSupabaseプロジェクト構築用（DBマイグレーション、メールテンプレート等）
 ├── public/                 # 静的コンテンツ（画像ファイル、プレーンHTML等）
 ├── docs/                   # 実装記録・ドキュメント
 ├── next.config.ts          # Next.jsの設定ファイル
@@ -319,7 +318,7 @@ erDiagram
 ### セットアップ手順
 
 1. 本プロジェクトのリポジトリを各自のローカル環境上にクローンします。
-2. 必要な外部ライブラリのパッケージをインストールします。
+2. 必要な外部ライブラリのパッケージ一式（`/node_modules`）をインストールします。
 
    ```bash
    npm install
