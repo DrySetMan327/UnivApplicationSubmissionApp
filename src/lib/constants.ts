@@ -1,0 +1,21 @@
+export const UNIVERSITY_INFO = {
+    nameKanji: 'ほげほげ大学',
+    nameKana: 'ホゲホゲダイガク',
+    departmentKanji: '総合学務部 入試課',
+    departmentKana: 'ソウゴウガクムブ ニュウシカ',
+    postalCode: '000-0000',
+    prefecture: '大阪府',
+    city: '大阪市北区',
+    townArea: '梅田１丁目１ー１',
+    building: '',
+    accessInfo: '最寄り駅「ふがふが駅」から徒歩5分',
+    contactName: 'ほげほげ大学 総合学務部 入試課 ヘルプデスク担当窓口',
+    phone: '06-1234-5678',
+    email: 'nyushi-info@hogehoge.ac.jp',
+    hoursPhoneReception: '平日 9:00 〜 17:00',
+    hoursEmailReception: '24時間受付',
+    holidays: '土日祝日、年末年始（12月30日～1月3日）',
+    note1: '※回答には2〜3営業日いただく場合がございます。',
+    note2: '※お急ぎの場合はお電話にてお問い合わせください。',
+    univHpUrl: 'http://localhost:3000/mockup_univ_hp.html'  // TODO: Update this URL to the actual university HP URL
+} as const;

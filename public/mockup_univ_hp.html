@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ほげほげ大学</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Simple Inter font import */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col font-sans">
+
+    <!-- Header -->
+    <header class="bg-blue-900 text-white py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold tracking-wider">ほげほげ大学（※モックアップ用のHPです。実在の大学ではありません。）</h1>
+            <nav class="hidden md:flex space-x-6 text-sm">
+                <a href="#" class="hover:text-blue-300">大学案内</a>
+                <a href="#" class="hover:text-blue-300">学部・大学院</a>
+                <a href="#" class="hover:text-blue-300">研究・産学官連携</a>
+                <a href="#" class="hover:text-blue-300">学生生活</a>
+                <a href="#" class="hover:text-blue-300">入試情報</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-[500px] bg-gray-200 flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-blue-900/20 z-10"></div>
+        <!-- Placeholder for Hero Image -->
+        <div
+            class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center grayscale-[30%]">
+        </div>
+
+        <div class="relative z-20 text-center text-white p-8 bg-black/40 rounded-xl backdrop-blur-sm">
+            <h2 class="text-5xl font-extrabold mb-4 tracking-tight">未来を、ここから。</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                ほげほげ大学は、革新的かつ実践的な教育と研究を通じて、<br>
+                新しい価値を創造し続ける次世代のリーダーを育成します。
+            </p>
+            <a href="/" target="_blank"
+                class="inline-flex items-center justify-center rounded-md text-sm transition-colors h-11 px-8 bg-yellow-500 text-black hover:bg-yellow-400 font-bold">
+                出願する
+            </a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="flex-1 container mx-auto px-4 py-12">
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- News Column -->
+            <div class="md:col-span-2 space-y-8">
+                <section>
+                    <h3 class="text-2xl font-bold border-b-2 border-blue-900 pb-2 mb-4 text-blue-900">News & Topics</h3>
+                    <ul class="space-y-4">
+                        <li class="flex flex-col md:flex-row md:items-center gap-2 border-b border-gray-100 pb-2">
+                            <span class="text-gray-500 text-sm font-mono">2026.02.10</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded w-fit">入試</span>
+                            <a href="#" class="hover:underline hover:text-blue-700 block flex-1 truncate">2026年度
+                                一般選抜（後期）の出願受付を開始しました</a>
+                        </li>
+                        <li class="flex flex-col md:flex-row md:items-center gap-2 border-b border-gray-100 pb-2">
+                            <span class="text-gray-500 text-sm font-mono">2026.02.05</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded w-fit">研究</span>
+                            <a href="#" class="hover:underline hover:text-blue-700 block flex-1 truncate">理学部・田中ほげ太
+                                教授の研究チームが新種のキノコを発見</a>
+                        </li>
+                        <li class="flex flex-col md:flex-row md:items-center gap-2 border-b border-gray-100 pb-2">
+                            <span class="text-gray-500 text-sm font-mono">2026.01.28</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded w-fit">イベント</span>
+                            <a href="#"
+                                class="hover:underline hover:text-blue-700 block flex-1 truncate">春のオープンキャンパス開催のお知らせ</a>
+                        </li>
+                        <li class="flex flex-col md:flex-row md:items-center gap-2 border-b border-gray-100 pb-2">
+                            <span class="text-gray-500 text-sm font-mono">2026.01.15</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded w-fit">重要</span>
+                            <a href="#"
+                                class="hover:underline hover:text-blue-700 block flex-1 truncate">〇×△地震により被災された受験生の皆様へ</a>
+                        </li>
+                    </ul>
+                    <div class="mt-4 text-right">
+                        <a href="#" class="text-sm text-blue-600 hover:underline">一覧を見る →</a>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="text-2xl font-bold border-b-2 border-blue-900 pb-2 mb-4 text-blue-900">学部・大学院</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div
+                            class="bg-gray-50 p-4 rounded hover:bg-gray-100 transition cursor-pointer border hover:border-blue-300">
+                            <h4 class="font-bold text-lg text-gray-800">文学部</h4>
+                            <p class="text-xs text-gray-500 mt-1">Faculty of Letters</p>
+                        </div>
+                        <div
+                            class="bg-gray-50 p-4 rounded hover:bg-gray-100 transition cursor-pointer border hover:border-blue-300">
+                            <h4 class="font-bold text-lg text-gray-800">法学部</h4>
+                            <p class="text-xs text-gray-500 mt-1">Faculty of Law</p>
+                        </div>
+                        <div
+                            class="bg-gray-50 p-4 rounded hover:bg-gray-100 transition cursor-pointer border hover:border-blue-300">
+                            <h4 class="font-bold text-lg text-gray-800">経済学部</h4>
+                            <p class="text-xs text-gray-500 mt-1">Faculty of Economics</p>
+                        </div>
+                        <div
+                            class="bg-gray-50 p-4 rounded hover:bg-gray-100 transition cursor-pointer border hover:border-blue-300">
+                            <h4 class="font-bold text-lg text-gray-800">理学部</h4>
+                            <p class="text-xs text-gray-500 mt-1">Faculty of Science</p>
+                        </div>
+                        <div
+                            class="bg-gray-50 p-4 rounded hover:bg-gray-100 transition cursor-pointer border hover:border-blue-300">
+                            <h4 class="font-bold text-lg text-gray-800">工学部</h4>
+                            <p class="text-xs text-gray-500 mt-1">Faculty of Engineering</p>
+                        </div>
+                        <div
+                            class="bg-gray-50 p-4 rounded hover:bg-gray-100 transition cursor-pointer border hover:border-blue-300">
+                            <h4 class="font-bold text-lg text-gray-800">農学部</h4>
+                            <p class="text-xs text-gray-500 mt-1">Faculty of Agriculture</p>
+                        </div>
+                        <div
+                            class="bg-gray-50 p-4 rounded hover:bg-gray-100 transition cursor-pointer border hover:border-blue-300">
+                            <h4 class="font-bold text-lg text-gray-800">医学部</h4>
+                            <p class="text-xs text-gray-500 mt-1">Faculty of Medicine</p>
+                        </div>
+                        <div
+                            class="bg-gray-50 p-4 rounded hover:bg-gray-100 transition cursor-pointer border hover:border-blue-300">
+                            <h4 class="font-bold text-lg text-gray-800">大学院</h4>
+                            <p class="text-xs text-gray-500 mt-1">Faculty of Graduate Schools</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="space-y-6">
+                <div class="bg-blue-50 p-6 rounded-lg border border-blue-100">
+                    <h4 class="font-bold text-blue-900 mb-4 flex items-center gap-2">
+                        <span class="w-2 h-6 bg-blue-600 block"></span>
+                        受験生の方へ
+                    </h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#"
+                                class="block p-2 bg-white rounded shadow-sm hover:shadow hover:text-blue-600 transition">入試要項・出願書類</a>
+                        </li>
+                        <li><a href="#"
+                                class="block p-2 bg-white rounded shadow-sm hover:shadow hover:text-blue-600 transition">オープンキャンパス情報</a>
+                        </li>
+                        <li><a href="#"
+                                class="block p-2 bg-white rounded shadow-sm hover:shadow hover:text-blue-600 transition">進学相談会</a>
+                        </li>
+                        <li><a href="#"
+                                class="block p-2 bg-white rounded shadow-sm hover:shadow hover:text-blue-600 transition">過去の入試結果</a>
+                        </li>
+                    </ul>
+                    <a href="/" target="_blank"
+                        class="inline-flex items-center justify-center rounded-md text-sm transition-colors h-11 px-8 bg-blue-600 text-white hover:bg-blue-700 font-bold w-full mt-6">
+                        インターネット出願はこちら
+                    </a>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h4 class="font-bold text-gray-900 mb-2">PICK UP</h4>
+                    <div class="aspect-video bg-gray-200 rounded mb-2"></div>
+                    <p class="text-xs text-gray-600">キャンパスの四季折々の風景をお届けします。</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h5 class="text-white font-bold mb-4">ほげほげ大学</h5>
+                    <p class="text-sm">〒000-0000<br>大阪府大阪市西成区1-1-1</p>
+                </div>
+                <div>
+                    <h6 class="font-bold mb-2 text-gray-400">大学紹介</h6>
+                    <ul class="space-y-1 text-sm">
+                        <li><a href="#" class="hover:text-white">学長挨拶</a></li>
+                        <li><a href="#" class="hover:text-white">理念・ビジョン</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="font-bold mb-2 text-gray-400">教育・研究</h6>
+                    <ul class="space-y-1 text-sm">
+                        <li><a href="#" class="hover:text-white">学部・学科</a></li>
+                        <li><a href="#" class="hover:text-white">研究シーズ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="font-bold mb-2 text-gray-400">リンク</h6>
+                    <ul class="space-y-1 text-sm">
+                        <li><a href="#" class="hover:text-white">採用情報</a></li>
+                        <li><a href="#" class="hover:text-white">お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-4 text-center text-sm">
+                &copy; Hogehoge University. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
