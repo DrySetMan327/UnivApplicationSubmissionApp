@@ -297,16 +297,17 @@ erDiagram
 │   │   └── ui/             # 汎用UI（Alert, Button, Card等）
 │   ├── lib/                # スキーマ定義、共通型、ユーティリティ
 │   └── utils/              # Supabaseクライアント等の設定
-├── supabase/               # ローカル環境上のSupabaseプロジェクト構築用（DBマイグレーション、メールテンプレート等）
+├── supabase/               # ローカル環境上のSupabaseプロジェクト構築用（DB、メールテンプレート等）
 ├── public/                 # 静的コンテンツ（画像ファイル、プレーンHTML等）
-├── docs/                   # 実装記録・ドキュメント
-├── next.config.ts          # Next.jsの設定ファイル
-├── tailwind.config.ts      # Tailwind CSSの設定ファイル
-└── ...
+├── next.config.ts          # Next.jsアプリケーションの動作設定用ファイル
+├── tsconfig.json           # TypeScriptのコンパイル設定用ファイル
+├── postcss.config.mjs      # PostCSSのCSS変換・加工に関する設定用ファイル
+├── eslint.config.mjs       # 静的コード解析ツール（ESLint）の設定用ファイル
+├── package.json            # プロジェクトの依存関係やnpmスクリプトの設定用ファイル
+├── package-lock.json       # インストール済みパッケージの依存関係やバージョン情報の記録用ファイル
+├── .gitignore              # Gitバージョン管理除外対象の設定用ファイル
+└── README.md               # 本プロジェクトの取扱説明書（本ドキュメント）
 ```
-
-※その他、一般的なNext.jsアプリケーションやTypeScriptプロジェクトで利用されるものや  
-環境依存の設定ファイル類の記載は省略しています。  
 
 ## 開発環境構築
 
