@@ -6,6 +6,8 @@
 エンドユーザーである受験生が、出願申し込み、並びに、受験に係る諸々の手続きや確認操作を
 快適に行うことができるアプリケーション（Web出願サイト）を目指します。  
 
+本番モックアップサイトURL（Vercel）: [univ-application-submission-app.vercel.app](https://univ-application-submission-app.vercel.app/)
+
 ## 使用技術
 
 - **Frontend Framework**: Next.js 15.1.6 (App Router)
@@ -315,6 +317,8 @@ erDiagram
 
 - Node.js v22系以上
 - npm
+- Docker Desktop (またはDockerデーモンが動作するコンテナ実行環境)
+- Supabase CLI
 
 ### セットアップ手順
 
@@ -325,20 +329,38 @@ erDiagram
    npm install
    ```
 
-3. プロジェクトルートのディレクトリ直下に `.env.local` ファイルを作成し、Supabaseへの接続情報を設定します。
+3. Docker Desktop（コンテナ実行環境）が実行中であることを確認し、Supabaseのローカル開発環境を起動します。
+   ※ 初回起動時は必要なDockerコンテナイメージをダウンロードするため、完了までしばらく時間がかかります。
 
-   ```text
-   NEXT_PUBLIC_SUPABASE_URL=各自のSupabaseプロジェクトURL
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=各自のSupabase Anon Key
+   ```bash
+   npx supabase start
    ```
 
-4. 開発サーバーを起動します。
+   ※ 起動が完了すると、コンソール上にローカル開発用の `API URL` と `anon key` などが出力されます。
+
+4. コンテナ内のDB（PostgreSQL）に対して、スキーマ（テーブル等）の作成と初期データの投入を行います。
+
+   ```bash
+   npx supabase db reset
+   ```
+
+   ※ 上記コマンドの実行により、`supabase/schema.sql` に定義されたスキーマ、  
+   および、 `supabase/seed.sql` に定義された初期データがローカル開発環境のDBに反映されます。
+
+5. プロジェクトルートのディレクトリ直下に `.env.local` を作成し、手順3で出力されたローカル開発環境用のSupabaseクライアントへの接続情報を設定します。
+
+   ```text
+   NEXT_PUBLIC_SUPABASE_URL = 手順3でコンソールに出力されたAPI URLの値
+   NEXT_PUBLIC_SUPABASE_ANON_KEY = 手順3でコンソールに出力されたanon keyの値
+   ```
+
+6. 開発サーバーを起動します。
 
    ```bash
    npm run dev
    ```
 
-5. ブラウザで [http://localhost:3000](http://localhost:3000) にアクセスし、アプリケーションが起動していることを確認します。
+7. ブラウザで [http://localhost:3000](http://localhost:3000) にアクセスし、Next.jsアプリケーションが起動していることを確認します。
 
 ### トラブルシューティング
 
