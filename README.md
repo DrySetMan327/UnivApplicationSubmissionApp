@@ -10,13 +10,13 @@
 
 ## 使用技術
 
-- **Frontend Framework**: Next.js 15.1.6 (App Router)
-- **Language**: TypeScript 5
-- **UI/Styling**: Tailwind CSS 4, Radix UI, Lucide React
-- **Animations**: Framer Motion
-- **Form Handling**: React Hook Form, Zod
-- **Backend/Database**: Supabase
-- **Package Manager**: npm (Node.js v22 recommended)
+- **Frontend Framework**: ![Next.js](https://img.shields.io/badge/Next.js-black?logo=next.js&logoColor=white) v15.1.6 (App Router)
+- **Language**: ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white) v5
+- **UI/Styling**: ![Tailwind_CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white) ![Radix_UI](https://img.shields.io/badge/Radix_UI-161618?logo=radix-ui&logoColor=white) Lucide React
+- **Animations**: ![Framer_Motion](https://img.shields.io/badge/Framer_Motion-0055FF?logo=framer&logoColor=white)
+- **Form Handling**: ![React_Hook_Form](https://img.shields.io/badge/React_Hook_Form-ec5990?logo=react-hook-form&logoColor=white) ![Zod](https://img.shields.io/badge/Zod-3068b7?logo=zod&logoColor=white)
+- **Backend(Database/Authorization)**: ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?logo=supabase&logoColor=white)
+- **Package Manager**: ![npm](https://img.shields.io/badge/npm-CB3837?logo=npm&logoColor=white) (![Node.js](https://img.shields.io/badge/Node.js-5FA04E?logo=node.js&logoColor=white) v22 recommended)
 
 ## 機能一覧
 
