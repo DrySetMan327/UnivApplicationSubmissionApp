@@ -73,10 +73,8 @@ export const profileSchema = z.object({
 
     graduation_date: z
         .string()
-        .optional()
-        .refine(val => !val || /^\d{4}-\d{2}-\d{2}$/.test(val), {
-            message: 'YYYY-MM-DD形式で入力してください',
-        }),
+        .min(1, { message: '卒業（見込）年月日を入力してください' })
+        .regex(/^\d{4}-\d{2}-\d{2}$/, { message: 'YYYY-MM-DD形式で入力してください' }),
 
     phone_number_1: z
         .string()

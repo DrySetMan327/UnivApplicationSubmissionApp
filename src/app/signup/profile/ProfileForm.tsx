@@ -131,7 +131,7 @@ export default function ProfileForm({ prefectures }: ProfileFormProps) {
                                 </div>
                                 <div className="space-y-1">
                                     <div className="font-medium text-muted-foreground">卒業（見込）年月日</div>
-                                    <div className="text-lg font-medium border-b pb-1">{form.getValues('graduation_date') || '（未入力）'}</div>
+                                    <div className="text-lg font-medium border-b pb-1">{form.getValues('graduation_date')}</div>
                                 </div>
 
                                 <div className="space-y-1">
@@ -264,7 +264,7 @@ export default function ProfileForm({ prefectures }: ProfileFormProps) {
                                     {form.formState.errors.high_school_name && <p className="text-sm text-red-500">{form.formState.errors.high_school_name.message}</p>}
                                 </div>
                                 <div className="space-y-2">
-                                    <label htmlFor="graduation_date" className="text-sm font-medium">卒業（見込）年月日</label>
+                                    <label htmlFor="graduation_date" className="text-sm font-medium">卒業（見込）年月日 <span className="text-red-500">*</span></label>
                                     <Input type="date" id="graduation_date" {...form.register('graduation_date')} className={form.formState.errors.graduation_date ? "border-red-500" : ""} />
                                     {form.formState.errors.graduation_date && <p className="text-sm text-red-500">{form.formState.errors.graduation_date.message}</p>}
                                 </div>

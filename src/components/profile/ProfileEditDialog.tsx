@@ -214,7 +214,7 @@ export function ProfileEditDialog({ isOpen, onClose, profile, prefectures, onSuc
                                 {errors.high_school_name && <p className="text-xs text-red-500">{errors.high_school_name.message}</p>}
                             </div>
                             <div className="space-y-2">
-                                <label className="text-sm font-medium">卒業（見込）年月日</label>
+                                <label className="text-sm font-medium">卒業（見込）年月日 <span className="text-red-500">*</span></label>
                                 <Input type="date" {...register('graduation_date')} className={errors.graduation_date ? "border-red-500" : ""} />
                                 {errors.graduation_date && <p className="text-xs text-red-500">{errors.graduation_date.message}</p>}
                             </div>
